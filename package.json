@@ -1,0 +1,14 @@
+{
+  "name": "imagemanipulation",
+  "version": "1.0.0",
+  "description": "image manipulaition sae ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sharp": "^0.18.2"
+  }
+}
