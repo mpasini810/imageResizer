@@ -33,9 +33,10 @@ exports.handler = (event, context, callback) => {
   
   var imageStream = request(event.query.url);
   var transformation = sharp();
-  if (event.query && event.query.resize != undefined) {
-    var resizing = parseInt(event.query.resize);
-    transformation = transformation.resize(resizing);
+  if (event.query && event.query.resizeHeight && event.query.resizeWidth != undefined) {
+    var resizingHeight = parseInt(event.query.resize);
+    var resizingWidth = parseInt(event.query.resize);
+    transformation = transformation.resize(resizingWidth, resizingHeight);
   }
   if (event.query && event.query.rotate != undefined) {
     var rotation = parseInt(event.query.rotate);
